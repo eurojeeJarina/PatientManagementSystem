@@ -19,13 +19,14 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
 
+        DBConnect newConnection = new DBConnect();
         //launch();
 
         // TEST MODE HERE:
 
         // TEST PATIENT CLASS
-        Patient newPatient = new Patient();
-        newPatient.displayPatientDetails();
+        /*Patient newPatient = new Patient();
+        newPatient.displayPatientDetails();*/
 
         //TEST STAFF CLASS
        /* Staff newStaff = new Staff();
