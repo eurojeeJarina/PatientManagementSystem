@@ -19,8 +19,11 @@ public class DBConnect {
     private void connection() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            conn = DriverManager.getConnection(_URL,_USER,_PASSWORD);
+
+            conn = DriverManager.getConnection(_URL,_USER,_PASSWORD); // establish connection to the database using the url, username, password;
+
             System.out.println("Connection to database successful!");
+
         }catch (SQLException sqlex)
         {
             System.out.println("Unable to connect to the database");
