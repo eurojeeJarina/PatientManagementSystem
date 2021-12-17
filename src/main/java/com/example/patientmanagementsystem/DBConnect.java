@@ -24,6 +24,10 @@ public class DBConnect {
 
             System.out.println("Connection to database successful!");
 
+            // Insert the code here for sql queries
+
+
+
         }catch (SQLException sqlex)
         {
             System.out.println("Unable to connect to the database");

@@ -25,8 +25,8 @@ public class HelloApplication extends Application {
         // TEST MODE HERE:
 
         // TEST PATIENT CLASS
-        /*Patient newPatient = new Patient();
-        newPatient.displayPatientDetails();*/
+        Patient newPatient = new Patient();
+        newPatient.displayPatientDetails();
 
         //TEST STAFF CLASS
        /* Staff newStaff = new Staff();
