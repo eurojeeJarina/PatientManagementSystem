@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DBConnect {
 
-    private static final String _URL = "jdbc:sqlserver://localhost\\sqlexpress";
-    private static final String _USER = "sa";
-    private static final String _PASSWORD = "blank";
+    private static final String _URL = "jdbc:mysql://localhost/patient_cms";
+    private static final String _USER = "root";
+    private static final String _PASSWORD = "admin";
 
     public static Connection conn;
 
@@ -18,7 +18,14 @@ public class DBConnect {
 
     private void connection() {
         try {
+            /*
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            * - Use this to connect to microsoft server.
+            * */
+
+            Class.forName("com.mysql.cj.jdbc.Driver"); // Let's declare the driver
+
+
             conn = DriverManager.getConnection(_URL,_USER,_PASSWORD);
             System.out.println("Connection to database successful!");
         }catch (SQLException sqlex)

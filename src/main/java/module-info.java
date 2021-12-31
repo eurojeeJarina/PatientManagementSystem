@@ -8,6 +8,7 @@ module com.example.patientmanagementsystem {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires com.microsoft.sqlserver.jdbc;
+    requires mysql.connector.java;
 
     opens com.example.patientmanagementsystem to javafx.fxml;
     exports com.example.patientmanagementsystem;
