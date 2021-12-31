@@ -7,9 +7,9 @@ public class DBConnect {
 
     // Database Credentials
 
-    private static final String _URL = "jdbc:sqlserver://localhost\\sqlexpress";
-    private static final String _USER = "sa";
-    private static final String _PASSWORD = "blank";
+    private static final String _URL = "jdbc:mysql://localhost/patient_cms";
+    private static final String _USER = "root";
+    private static final String _PASSWORD = "admin";
 
     public static Connection conn;
 
@@ -22,14 +22,14 @@ public class DBConnect {
 
     private void connection() {
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             conn = DriverManager.getConnection(_URL,_USER,_PASSWORD); // establish connection to the database using the url, username, password;
 
             System.out.println("Connection to database successful!");
 
             // Insert the code here for sql queries
-            final String _SELECTALL = "SELECT * FROM iactproject.dbo.Patient";
+            final String _SELECTALL = "SELECT * FROM patient";
 
             browseAll = conn.prepareStatement(_SELECTALL);
 
